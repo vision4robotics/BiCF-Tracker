@@ -32,7 +32,7 @@ params.t_global.normalize_dim = true;   % Also normalize with respect to the dim
 
 % Image sample parameters
 params.search_area_shape = 'square';    % The shape of the samples
-params.search_area_scale = 4;         % The scaling of the target size to get the search area
+params.search_area_scale = 4;           % The scaling of the target size to get the search area
 params.min_image_sample_size = 150^2;   % Minimum area of image samples
 params.max_image_sample_size = 200^2;   % Maximum area of image samples
 
@@ -40,7 +40,6 @@ params.max_image_sample_size = 200^2;   % Maximum area of image samples
 params.refinement_iterations = 1;       % Number of iterations used to refine the resulting position in a frame
 params.newton_iterations = 5;           % The number of Newton iterations used for optimizing the detection score
 params.clamp_position = false;          % Clamp the target position to be inside the image
-
 params.output_sigma_factor = 1/16;		% Label function sigma
 
 % Regularization window parameters
@@ -65,7 +64,7 @@ params.scale_step = 1.01;               % The scale factor
 % Only used if: params.use_scale_filter = true
 params.use_scale_filter = true;         % Use the fDSST scale filter or not (for speed)
 params.scale_sigma_factor = 1/16;       % Scale label function sigma
-params.scale_learning_rate = 0.025;		% Scale filter learning rate
+params.scale_learning_rate = 0.027;		% Scale filter learning rate
 params.number_of_scales_filter = 17;    % Number of scales
 params.number_of_interp_scales = 33;    % Number of interpolated scales
 params.scale_model_factor = 1.0;        % Scaling of the scale model
@@ -83,22 +82,25 @@ params.gpu_id = [];                     % Set the GPU id, or leave empty to use 
 % Initialize
 params.seq = seq;
 
-% BiPCF parameters
-params.learning_rate = 0.03;
-params.admm_iterations = 4;
-params.mu = 100;
-params.beta = 10;
-params.mu_max = 100000;
-params.lambda = 0.01;
-params.gamma = 0.09;
+% BiCF parameters
+params.learning_rate = 0.038; % BiCF learning rate 
+params.BiCF_lambda = 0.01;    % Regularization factor on BiCF
+params.gamma = 0.03;          % Regularization factor on bidirectional error
 
-params.reg_window_max = 1e5;            % The maximum value of the regularization window
-params.reg_window_min = 1e-3;           % the minimum value of the regularization window
+% ADMM parameters
+params.admm_iterations = 4;   % Iterations
+params.mu = 100;              % Initial penalty factor
+params.mu_max = 100000;       % Maximum penalty factor
+params.beta = 10;             % Scale step
+
+% Regularization window
+params.reg_window_max = 1e5;  % The maximum value of the regularization window
+params.reg_window_min = 1e-3; % the minimum value of the regularization window
 
 % Visualization
-params.print_screen = 1;
-params.debug = 0;
-params.visualization = 1;               % Visualiza tracking and detection scores
+params.print_screen = 1;     % Print time spent on each frame to the command window
+params.disp_fps = 1;         % Display fps info when tracking process ends
+params.visualization = 1;    % Visualize tracking and detection scores
 
 % Run tracker
 results = tracker(params);

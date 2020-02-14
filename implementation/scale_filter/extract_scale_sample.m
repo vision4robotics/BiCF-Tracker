@@ -44,7 +44,8 @@ for s = 1:nScales
     
     if s == 1
         dim_scale = size(temp_hog,1)*size(temp_hog,2)*31;
-        scale_sample = zeros(dim_scale, nScales, 'single');
+%         scale_sample = zeros(dim_scale, nScales, 'single');
+        scale_sample = zeros(dim_scale, nScales);
     end
     
     scale_sample(:,s) = reshape(temp_hog(:,:,1:31), dim_scale, 1);

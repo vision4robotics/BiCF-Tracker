@@ -28,5 +28,3 @@ if params.use_projection_matrix == false
     params.proj_init_method = 'none';
     params.update_projection_matrix = false;
 end
-
-params.visualization = params.visualization || params.debug;

@@ -13,7 +13,8 @@ else
     newSize = [1 desiredLen];
 end
 
-resizeddft = complex(zeros(newSize, 'single'));
+% resizeddft = complex(zeros(newSize, 'single'));
+resizeddft = complex(zeros(newSize));
 
 mids = ceil(minsz/2);
 mide = floor((minsz-1)/2) - 1;

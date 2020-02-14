@@ -19,8 +19,10 @@ scale_filter.scaleSizeFactors = scale_step .^ scale_exp;
 scale_filter.interpScaleFactors = scale_step .^ interp_scale_exp_shift;
 
 ys = exp(-0.5 * (scale_exp_shift.^2) /scale_sigma^2);
-scale_filter.yf = single(fft(ys));
-scale_filter.window = single(hann(size(ys,2)))';
+% scale_filter.yf = single(fft(ys));
+% scale_filter.window = single(hann(size(ys,2)))';
+scale_filter.yf = fft(ys);
+scale_filter.window = hann(size(ys,2))';
 
 %make sure the scale model is not to large, to save computation time
 if params.scale_model_factor^2 * prod(init_target_sz) > params.scale_model_max_area

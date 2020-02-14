@@ -287,7 +287,7 @@ while true
     end
 
     % Do training
-    wf = train_BiPCF(params, model_xf, yf, reg_window, xf_p, wf_p);
+    wf = train_BiCF(params, model_xf, yf, reg_window, xf_p, wf_p);
     
     % Update the scale filter
     if nScales > 0 && params.use_scale_filter
@@ -333,7 +333,6 @@ while true
             text(10, 10, int2str(seq.frame), 'color', [0 1 1]);
             hold off;
             axis off;axis image;set(gca, 'Units', 'normalized', 'Position', [0 0 1 1])
-            
 %             output_name = 'Video_name';
 %             opengl software;
 %             writer = VideoWriter(output_name, 'MPEG-4');
@@ -344,11 +343,9 @@ while true
             resp_sz = round(img_support_sz*currentScaleFactor*scaleFactors(scale_ind));
             xs = floor(det_sample_pos(2)) + (1:resp_sz(2)) - floor(resp_sz(2)/2);
             ys = floor(det_sample_pos(1)) + (1:resp_sz(1)) - floor(resp_sz(1)/2);
-            
             % To visualize the continuous scores, sample them 10 times more
             % dense than output_sz.
             sampled_scores_display = fftshift(sample_fs(scores_fs(:,:,scale_ind), 10*output_sz));
-            
             figure(fig_handle);
 %             set(fig_handle, 'Position', [100, 100, 100+size(im,2), 100+size(im,1)]);
             imagesc(im_to_show);
@@ -358,10 +355,8 @@ while true
             rectangle('Position',rect_position_vis, 'EdgeColor','g', 'LineWidth',2);
             text(10, 10, int2str(seq.frame), 'color', [0 1 1]);
             hold off;
-            
 %             axis off;axis image;set(gca, 'Units', 'normalized', 'Position', [0 0 1 1])
         end
-        
         drawnow
         %         if frame > 1
         %             if frame < inf
@@ -374,8 +369,9 @@ while true
     end
 end
 % close(writer);
-
 [seq, results] = get_sequence_results(seq);
 
-disp(['fps: ' num2str(results.fps)])
+if params.disp_fps
+    disp(['fps: ' num2str(results.fps)]);
+end
 
