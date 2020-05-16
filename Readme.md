@@ -21,8 +21,8 @@ Matlab implementation of our Bidirectional Incongruity-Aware Correlation Filters
 <details open>
   <summary><b>UAV123@10fps</b></summary>
 <div align="center">
-    <img src="https://raw.githubusercontent.com/vision4robotics/BiCF-Tracker/master/results/UAV123_error_OPE.png" alt="UAV123_error">
-    <img src="https://raw.githubusercontent.com/vision4robotics/BiCF-Tracker/master/results/UAV123_overlap_OPE.png" alt="UAV123_overlap">
+    <img src="https://raw.githubusercontent.com/vision4robotics/BiCF-Tracker/master/results/UAV123_error.png" alt="UAV123_error">
+    <img src="https://raw.githubusercontent.com/vision4robotics/BiCF-Tracker/master/results/UAV123_overlap.png" alt="UAV123_overlap">
 </div>
 </details>
 
