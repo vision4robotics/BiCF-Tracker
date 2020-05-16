@@ -32,6 +32,7 @@ Matlab implementation of our Bidirectional Incongruity-Aware Correlation Filters
     <img src="https://raw.githubusercontent.com/vision4robotics/BiCF-Tracker/master/results/DTB70_error_OPE.png" alt="DTB70_error">
     <img src="https://raw.githubusercontent.com/vision4robotics/BiCF-Tracker/master/results/DTB70_overlap_OPE.png" alt="DTB70_overlap">
 </div>
+</details>
 
 <details>
   <summary><b>UAVDT</b></summary>
@@ -39,6 +40,7 @@ Matlab implementation of our Bidirectional Incongruity-Aware Correlation Filters
     <img src="https://raw.githubusercontent.com/vision4robotics/BiCF-Tracker/master/results/UAVDT_error_OPE.png" alt="UAVDT_error">
     <img src="https://raw.githubusercontent.com/vision4robotics/BiCF-Tracker/master/results/UAVDT_overlap_OPE.png" alt="UAVDT_overlap">
 </div>
+</details>
 
 ## Getting started
 
