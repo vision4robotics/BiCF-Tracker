@@ -10,7 +10,7 @@ Matlab implementation of our Bidirectional Incongruity-Aware Correlation Filters
 | ------------------------------------------------------------ |
 | [![matlab-2017](https://img.shields.io/badge/matlab-2017-yellow.svg)](https://www.mathworks.com/products/matlab.html) [![matlab-2018](https://img.shields.io/badge/matlab-2018-yellow.svg)](https://www.mathworks.com/products/matlab.html) [![matlab-2019](https://img.shields.io/badge/matlab-2019-yellow.svg)](https://www.mathworks.com/products/matlab.html) |
 
-#Publishment and citation
+# Publication and citation
 
 This paper has been published by ICRA2020. 
 
