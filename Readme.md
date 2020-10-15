@@ -10,6 +10,30 @@ Matlab implementation of our Bidirectional Incongruity-Aware Correlation Filters
 | ------------------------------------------------------------ |
 | [![matlab-2017](https://img.shields.io/badge/matlab-2017-yellow.svg)](https://www.mathworks.com/products/matlab.html) [![matlab-2018](https://img.shields.io/badge/matlab-2018-yellow.svg)](https://www.mathworks.com/products/matlab.html) [![matlab-2019](https://img.shields.io/badge/matlab-2019-yellow.svg)](https://www.mathworks.com/products/matlab.html) |
 
+#Publishment and citation
+
+This paper has been published by ICRA2020. 
+
+You can find this paper here: https://ieeexplore.ieee.org/document/9196530.
+
+Please cite this paper as:
+
+@INPROCEEDINGS{9196530,
+
+  author={F. {Lin} and C. {Fu} and Y. {He} and F. {Guo} and Q. {Tang}},
+  
+  booktitle={2020 IEEE International Conference on Robotics and Automation (ICRA)}, 
+  
+  title={BiCF: Learning Bidirectional Incongruity-Aware Correlation Filter for Efficient UAV Object Tracking}, 
+  
+  year={2020},
+  
+  volume={},
+  
+  number={},
+  
+  pages={2365-2371},}
+  
 ## Abstract
 
 > For more info, please refer to our [paper](https://vision4robotics.github.io/publication/2020_icra_bicf-tracker/BiCF.pdf) and [video](https://youtu.be/fS12kosv37s).
